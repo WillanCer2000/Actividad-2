@@ -1,10 +1,10 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify #importamos librerias
 
 app = Flask(__name__)
 
-@app.route('/personas')
-def nombres():
-    personas =[
+@app.route('/personas') #decorador
+def nombres(): #definir funcion
+    personas =[ #vector o celeccion
     
     {
         'nombre': 'Willian Andres Cervantes Cermeño',
@@ -31,7 +31,7 @@ def nombres():
     }
     ]
 
-    return jsonify(personas)
+    return jsonify(personas)  #retorna lista de nombres
 
 if __name__ == '__main__':
     app.run(debug=True)
